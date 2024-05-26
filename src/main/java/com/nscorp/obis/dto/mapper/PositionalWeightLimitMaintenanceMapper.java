@@ -1,0 +1,17 @@
+package com.nscorp.obis.dto.mapper;
+
+import com.nscorp.obis.domain.PositionalWeightLimitMaintenance;
+import com.nscorp.obis.dto.PositionalWeightLimitMaintenanceDTO;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
+
+@Mapper(componentModel = "spring")
+public interface PositionalWeightLimitMaintenanceMapper {
+	
+	PositionalWeightLimitMaintenanceMapper INSTANCE = Mappers.getMapper(PositionalWeightLimitMaintenanceMapper.class);
+
+	PositionalWeightLimitMaintenanceDTO positionalWeightLimitMaintenanceToPositionalWeightLimitMaintenanceDTO(PositionalWeightLimitMaintenance positionalWeightLimitMaintenance);
+
+	PositionalWeightLimitMaintenance positionalWeightLimitMaintenanceDTOToPositionalWeightLimitMaintenance(PositionalWeightLimitMaintenanceDTO positionalWeightLimitMaintenanceDTO);
+
+}

@@ -1,0 +1,16 @@
+package com.nscorp.obis.dto.mapper;
+
+import com.nscorp.obis.domain.DestinationTerminalNotifyProfile;
+import com.nscorp.obis.dto.DestinationTerminalNotifyProfileDTO;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
+
+@Mapper(componentModel = "spring")
+public interface DestinationTerminalNotifyProfileMapper {
+	DestinationTerminalNotifyProfileMapper INSTANCE = Mappers.getMapper(DestinationTerminalNotifyProfileMapper.class);
+
+	DestinationTerminalNotifyProfileDTO destinationTerminalNotifyProfileToDestinationTerminalNotifyProfileDTO(DestinationTerminalNotifyProfile destTerminalNotifyProfiles);
+
+	DestinationTerminalNotifyProfile destinationTerminalNotifyProfileDTOToDestinationTerminalNotifyProfile(DestinationTerminalNotifyProfileDTO destTerminalNotifyProfilesDTO);
+	
+}
